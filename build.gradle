@@ -2,6 +2,7 @@ plugins {
 	id 'java'
     id 'java-library'
     id 'eclipse'
+    id 'maven'
 }
 
 sourceCompatibility = 1.8
