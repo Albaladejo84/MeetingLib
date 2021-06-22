@@ -5,10 +5,10 @@ plugins {
 }
 
 //targetCompatibility = '11'
-sourceCompatibility = '11'
+sourceCompatibility = '1.8'
 
 repositories {
-	//mavenCentral()
+	mavenCentral()
 	jcenter()
 }
 
