@@ -1,18 +1,32 @@
-plugins {
-	//id 'java'
-	id 'java-library'
-	//id 'eclipse'
+lugins {
+	id 'java'
+    id 'java-library'
+    id 'eclipse'
 }
 
-//targetCompatibility = '11'
-sourceCompatibility = '1.8'
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 repositories {
-	mavenCentral()
-	jcenter()
+    jcenter()
+    
+    maven { url 'https://jitpack.io' }
 }
 
 dependencies {
-
 }
 
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+artifacts {
+    archives sourcesJar
+    archives javadocJar
+}
