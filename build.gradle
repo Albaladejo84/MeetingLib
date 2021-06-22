@@ -1,4 +1,4 @@
-lugins {
+plugins {
 	id 'java'
     id 'java-library'
     id 'eclipse'
@@ -12,6 +12,7 @@ repositories {
     
     maven { url 'https://jitpack.io' }
 }
+
 configurations {
  compileOnly {
   extendsFrom annotationProcessor
